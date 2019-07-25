@@ -9,7 +9,8 @@ def main(url):
         with requests.get(url) as res:
             bs4_obj = bs4.BeautifulSoup(res.text, 'html.parser')
             title = bs4_obj.title.string
-            print(title)
+            md_link = f'[{title}]({url})'
+            print(md_link)
     except requests.HTTPError as e:
         print(e)
 
