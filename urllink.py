@@ -2,7 +2,6 @@
 import bs4
 import pyperclip
 import requests
-import sys
 
 
 def main(url):
@@ -19,9 +18,4 @@ def main(url):
 
 
 if __name__ == "__main__":
-    args = sys.argv
-    if len(args) != 2:
-        print('Usage: urllink <URL>')
-        exit()
-    else:
-        main(args[1])
+    main(pyperclip.paste())
